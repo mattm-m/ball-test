@@ -1,6 +1,7 @@
 #first change after syncing to local mac repo and commiting within visual code studio - just this comment
 #second change made after loading into V
-#import needed libraries   
+#import needed libraries
+import random
 import turtle
 from turtle import *
 
@@ -11,9 +12,15 @@ LEFT_EDGE = -400
 BOTTOM_EDGE = -400
 TOP_EDGE = 400
 
+MyList=["brown","white","skyblue"]
+MyList2= ["blue","red","yellow"]
+
+#question 4
 GRAVITY = -.1
 DAMPING = -1.5
 FRICTION = -.02
+
+
 
 #This function will update the location of the ball
 def moveBall():
@@ -85,18 +92,20 @@ yVel = 3
 
 screen.tracer(0) #turn off auto screen updates to make it faster
 
-
 while True:
     moveBall()
     screen.update()
+    #question 1
     x=ball.xcor()
     if x<= LEFT_EDGE:
-        ball.color("brown")
+        ball.color(random.choice(MyList))
     if x>=RIGHT_EDGE:
-        ball.color("white")
+        ball.color(random.choice(MyList))
     y=ball.ycor()
     if y<= BOTTOM_EDGE:
-        ball.color("red")
+        ball.color(random.choice(MyList2))
     if y>= TOP_EDGE:
-        ball.color ("yellow")
-#I was able to  have the ball change to different colors when it hit each side, however I could not find out how to choose a random color from a set list, I understand how I would do it with numbers however that method did not work when I tried with preset colors
+       ball.color(random.choice(MyList2))
+       #question 2 attempted, not finished 
+       turtle.listen()
+       turtle.onkey(space)
