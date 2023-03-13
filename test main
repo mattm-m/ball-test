@@ -4,6 +4,7 @@
 import turtle
 from turtle import *
 
+
 #Define constants
 RIGHT_EDGE= 400
 LEFT_EDGE = -400
@@ -88,3 +89,13 @@ screen.tracer(0) #turn off auto screen updates to make it faster
 while True:
     moveBall()
     screen.update()
+    x=ball.xcor()
+    if x<= LEFT_EDGE:
+        ball.color("brown")
+    if x>=RIGHT_EDGE:
+        ball.color("white")
+    y=ball.ycor()
+    if y<= BOTTOM_EDGE:
+        ball.color("red")
+    if y>= TOP_EDGE:
+        ball.color ("yellow")
