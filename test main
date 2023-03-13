@@ -11,9 +11,9 @@ LEFT_EDGE = -400
 BOTTOM_EDGE = -400
 TOP_EDGE = 400
 
-GRAVITY = .1
-DAMPING = .8
-FRICTION = .02
+GRAVITY = -.1
+DAMPING = -1.5
+FRICTION = -.02
 
 #This function will update the location of the ball
 def moveBall():
