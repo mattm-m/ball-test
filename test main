@@ -99,3 +99,4 @@ while True:
         ball.color("red")
     if y>= TOP_EDGE:
         ball.color ("yellow")
+#I was able to  have the ball change to different colors when it hit each side, however I could not find out how to choose a random color from a set list, I understand how I would do it with numbers however that method did not work when I tried with preset colors
